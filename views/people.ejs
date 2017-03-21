@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>People</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+
+      <div class="container">
+        <div class="info">
+          <h3>Please enter:</h3>
+          <form action="/people" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder=" Your Name"><br><br>
+            <label for="city">Favorite City:</label>
+            <input type="text" name="city" id="city" placeholder="Your Favorite City">
+            <br><br>
+            <input type="submit" value="Post">
+          </form>
+        </div>
+        <div class="all-people">
+          <h5>Click over person for individual page</h5>
+          <ul class="list-people">
+            <% for (var i =0; i<data.length; i++) {%>
+            <li>
+              <span>
+                <i class="fa fa-times" aria-hidden="true" id="<%= data[i].id %>"></i>
+              </span>
+              <a href="/people/<%= data[i].id %>">
+                <%= data[i].id %>.
+                Name: <%= data[i].name %> &amp;
+                Favorite City: <%= data[i].city %>
+              </a>
+              <br><br>
+                Update City:
+                <input type="text" name="updateCity<%= data[i].id %>" id="updateCity<%= data[i].id %>" onkeydown="if (event.keyCode == 13)
+                        $('.click<%= data[i].id %>').click()">
+                <button type="button" name="update-button" class="update-button click<%= data[i].id %>" id="<%= data[i].id %>">Update</button>
+            </li>
+            <br>
+          <% } %>
+          </ul>
+        </div>
+      </div>
+
+  <script src = "/jquery-3.2.0.js"></script>
+  <script src = "/script.js"></script>
+
+  </body>
+
+
+</html>
