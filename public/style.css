@@ -16,7 +16,7 @@ body{
 
 .center{
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -35,7 +35,7 @@ ul li{
 }
 
 .all-people{
-  padding-left: 100px;
+  padding-left: 200px;
 }
 
 .all-people ul li{
