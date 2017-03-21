@@ -17,5 +17,9 @@ $(".update-button ").on('click', function(event) {
     contentType: 'application/json',
     data: JSON.stringify({updateCity: updateCity}),
   });
-  window.location.replace('/people');
+  setTimeout(timeout, 500);
 });
+
+function timeout(){
+  window.location.replace('/people');
+}
