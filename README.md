@@ -1,6 +1,6 @@
-# Spotify Coding Challenge
+# RESTful FullStack App
 
-A RESTful fullstack application.
+A RESTful fullstack application demostrating CRUD.
 
 ### Requirements:
 **The client can do the following:**
